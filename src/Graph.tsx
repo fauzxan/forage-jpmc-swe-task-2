@@ -58,6 +58,7 @@ class Graph extends Component<IProps, {}> {
       // Row pivots to help us set seperate for each stock based on timestamp 
       elem.setAttribute("row_pivots", '["timestamp"]');
       elem.setAttribute("columns", '["top_ask_price"]');
+      // Aggregates attribute will help us to remove duplicates by defining it this way. 
       elem.setAttribute("aggregates",
                 '{"stock":"distinct_count", "top_ask_price":"avg", "top_bid_price":"avg", "timestamp":"distinct_count"}'
             );
